@@ -44,7 +44,7 @@ namespace WebAjaxApp.Controllers
         // POST: Drinks/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(DrinkViewModel drink)
+        public ActionResult Create(DrinkViewModel drink)//need to have zero constructor for this binding to work
         {
             if (ModelState.IsValid)
             {

@@ -1,0 +1,27 @@
+﻿@model List<Drink>
+@{
+    ViewData["Title"] = "SPA";
+}
+
+<h1>SPA</h1>
+
+<div class="row">
+    <div class="col-12">
+
+        <input id="drinkName" name="Name" type="text" value=""/>
+        <input id="drinkVolume" name="Volume" type="number" value=""/>
+        <input id="drinkAlcoholic" name="Alcoholic" type="checkbox" value=""/>
+        <input id="drinkCarbonated" name="Carbonated" type="checkbox" value=""/>
+
+        <button class="btn btn-success" onclick="createDrink()">Create</button>
+    </div>
+</div>
+
+<div class=" row">
+    <div id="drinkList" class="col-12">
+        @foreach (var item in Model)
+        {
+            <partial name="_drinkPartial" model="item" />
+        }
+    </div>
+</div>

@@ -19,7 +19,7 @@ namespace WebAjaxApp.Models
 
         public bool Carbonated { get; set; }
 
-        public DrinkViewModel() {}
+        public DrinkViewModel() {}//zero constuctor (no input arguments)
         public DrinkViewModel(Drink drink)
         {
             Name = drink.Name;
